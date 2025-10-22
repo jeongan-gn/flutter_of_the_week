@@ -1,0 +1,150 @@
+import 'package:flutter/material.dart';
+import 'widget_otw/1_CupertinoRadio.dart';
+import 'widget_otw/2_CupertinoSheetRoute.dart';
+import 'widget_otw/3_CupertinoSlidingSegmentControl.dart';
+import 'widget_otw/4_CupertinoCheckbox.dart';
+import 'widget_otw/5_CupertinoSwitch.dart';
+import 'widget_otw/6_CarouselView.dart';
+import 'widget_otw/7_SearchBar_SearchAnchor.dart';
+import 'widget_otw/8_Video_player.dart';
+import 'widget_otw/9_MediaQuery_propertyOf.dart';
+import 'widget_otw/10_UnmodifiableListView.dart';
+import 'widget_otw/11_Uint8List.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Widget of the Week',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const WidgetListPage(),
+    );
+  }
+}
+
+// DataSource 모델 클래스
+class WidgetItem {
+  final int number;
+  final String name;
+  final Widget Function() pageBuilder;
+
+  WidgetItem({
+    required this.number,
+    required this.name,
+    required this.pageBuilder,
+  });
+
+  String get displayTitle => '$number.$name';
+}
+
+class WidgetListPage extends StatefulWidget {
+  const WidgetListPage({super.key});
+
+  @override
+  State<WidgetListPage> createState() => _WidgetListPageState();
+}
+
+class _WidgetListPageState extends State<WidgetListPage> {
+  // DataSource: 배운 위젯 목록
+  final List<WidgetItem> _widgetItems = [
+    WidgetItem(
+      number: 1,
+      name: 'CupertinoRadio',
+      pageBuilder: () => const CupertinoRadioPage(),
+    ),
+    WidgetItem(
+      number: 2,
+      name: 'CupertinoSheetRoute',
+      pageBuilder: () => const CupertinoSheetRoutePage(),
+    ),
+    WidgetItem(
+      number: 3,
+      name: 'CupertinoSlidingSegmentControl',
+      pageBuilder: () => const CupertinoSlidingSegmentedControlPage(),
+    ),
+    WidgetItem(
+      number: 4,
+      name: 'CupertinoCheckboxPage',
+      pageBuilder: () => const CupertinoCheckboxPage(),
+    ),
+    WidgetItem(
+      number: 5,
+      name: 'CupertinoSwitch',
+      pageBuilder: () => const CupertinoSwitchPage(),
+    ),
+    WidgetItem(
+      number: 6,
+      name: 'CarouseViewState',
+      pageBuilder: () => const CarouselViewPage(),
+    ),
+    WidgetItem(
+      number: 7,
+      name: 'SearchBar & SearchAnchor',
+      pageBuilder: () => const SearchBarAndAnchorPage(),
+    ),
+    WidgetItem(
+      number: 8,
+      name: 'VideoPlayer',
+      pageBuilder: () => const VideoPlayerPage(),
+    ),
+    WidgetItem(
+      number: 9,
+      name: 'MediaQueryProperty',
+      pageBuilder: () => const MediaQueryPropertyOfPage(),
+    ),
+    WidgetItem(
+      number: 10,
+      name: 'UnmodifiableListView',
+      pageBuilder: () => const UnmodifiableListViewPage(),
+    ),
+    WidgetItem(
+      number: 11,
+      name: 'Uint8List',
+      pageBuilder: () => const Uint8ListPage(),
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Text('Widget of the Week'),
+      ),
+      body: ListView.builder(
+        itemCount: _widgetItems.length,
+        itemBuilder: (context, index) {
+          final item = _widgetItems[index];
+          return ListTile(
+            // 왼쪽에 번호 표시
+            leading: CircleAvatar(
+              child: Text('${item.number}'),
+            ),
+            // 위젯 이름
+            title: Text(item.name),
+            // 오른쪽 화살표 아이콘
+            trailing: const Icon(Icons.chevron_right),
+            // Cell 클릭 시 해당 페이지로 이동
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => item.pageBuilder(),
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
