@@ -1,4 +1,3 @@
-**/dgph
 *.mode1v3
 *.mode2v3
 *.moved-aside
@@ -27,7 +26,10 @@ Flutter/flutter_export_environment.sh
 ServiceDefinitions.json
 Runner/GeneratedPluginRegistrant.*
 
-# Exceptions to above rules.
+Flutter/
+Runner.xcworkspace/
+
+# 예외 (추적할 소스/설정)
 !default.mode1v3
 !default.mode2v3
 !default.pbxuser
