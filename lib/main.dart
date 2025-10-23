@@ -10,6 +10,7 @@ import 'widget_otw/8_Video_player.dart';
 import 'widget_otw/9_MediaQuery_propertyOf.dart';
 import 'widget_otw/10_UnmodifiableListView.dart';
 import 'widget_otw/11_Uint8List.dart';
+import 'widget_otw/19_SecmentedButton.dart';
 
 void main() {
   runApp(const MyApp());
@@ -110,6 +111,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 11,
       name: 'Uint8List',
       pageBuilder: () => const Uint8ListPage(),
+    ),
+    WidgetItem(
+      number: 19,
+      name: 'Completer',
+      pageBuilder: () => const SecmentedButtonPage(),
     ),
   ];
 
