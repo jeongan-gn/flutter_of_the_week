@@ -16,6 +16,7 @@ import 'widget_otw/21_OverlayPortal.dart';
 import 'widget_otw/28_CallbackShortcuts.dart';
 import 'widget_otw/29_Draggable.dart';
 import 'widget_otw/34_RawMagnifier.dart';
+import 'widget_otw/38_NavigationBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -146,6 +147,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 34,
       name: 'RawMagnifier',
       pageBuilder: () => const RawMagnifierPage(),
+    ),
+    WidgetItem(
+      number: 38,
+      name: 'NavigationBar',
+      pageBuilder: () => const NavigationBarPage(),
     ),
   ];
 
