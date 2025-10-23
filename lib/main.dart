@@ -17,6 +17,7 @@ import 'widget_otw/28_CallbackShortcuts.dart';
 import 'widget_otw/29_Draggable.dart';
 import 'widget_otw/34_RawMagnifier.dart';
 import 'widget_otw/38_NavigationBar.dart';
+import 'widget_otw/39_FutureBuilder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -152,6 +153,13 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 38,
       name: 'NavigationBar',
       pageBuilder: () => const NavigationBarPage(),
+    ),
+    WidgetItem(
+      number: 39,
+      name: 'FutureBuilder',
+      pageBuilder: () => const FutureBuilderPage(
+        title: "39. FutureBuilder",
+      ),
     ),
   ];
 
