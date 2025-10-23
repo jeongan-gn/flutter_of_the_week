@@ -11,6 +11,7 @@ import 'widget_otw/9_MediaQuery_propertyOf.dart';
 import 'widget_otw/10_UnmodifiableListView.dart';
 import 'widget_otw/11_Uint8List.dart';
 import 'widget_otw/19_SecmentedButton.dart';
+import 'widget_otw/20_DropdownMenu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -114,8 +115,13 @@ class _WidgetListPageState extends State<WidgetListPage> {
     ),
     WidgetItem(
       number: 19,
-      name: 'Completer',
+      name: 'SegmentedButton',
       pageBuilder: () => const SecmentedButtonPage(),
+    ),
+    WidgetItem(
+      number: 20,
+      name: 'DropdownMenu',
+      pageBuilder: () => const DropdownMenuPage(),
     ),
   ];
 
