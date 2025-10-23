@@ -13,6 +13,7 @@ import 'widget_otw/11_Uint8List.dart';
 import 'widget_otw/19_SecmentedButton.dart';
 import 'widget_otw/20_DropdownMenu.dart';
 import 'widget_otw/21_OverlayPortal.dart';
+import 'widget_otw/28_CallbackShortcuts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -128,6 +129,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 21,
       name: 'OverlayPortal',
       pageBuilder: () => const OverlayPortalPage(),
+    ),
+    WidgetItem(
+      number: 28,
+      name: 'CallbackShortcuts',
+      pageBuilder: () => const CallbackShortcutsPage(),
     ),
   ];
 
