@@ -19,6 +19,7 @@ import 'widget_otw/34_RawMagnifier.dart';
 import 'widget_otw/38_NavigationBar.dart';
 import 'widget_otw/39_FutureBuilder.dart';
 import 'widget_otw/41_Actions.dart';
+import 'widget_otw/42_Shortcuts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -166,6 +167,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 41,
       name: 'Actions',
       pageBuilder: () => const ActionsPage(),
+    ),
+    WidgetItem(
+      number: 42,
+      name: 'Shortcuts',
+      pageBuilder: () => const ShortcutsPage(),
     ),
   ];
 
