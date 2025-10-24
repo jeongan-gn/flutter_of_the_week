@@ -23,6 +23,7 @@ import 'widget_otw/42_Shortcuts.dart';
 import 'widget_otw/43_Focus.dart';
 import 'widget_otw/44_TextStyle.dart';
 import 'widget_otw/46_LinearGradient.dart';
+import 'widget_otw/47_Autocomplete.dart';
 
 void main() {
   runApp(const MyApp());
@@ -190,6 +191,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 46,
       name: 'LinearGradient',
       pageBuilder: () => const LinearGradientPage(),
+    ),
+    WidgetItem(
+      number: 47,
+      name: 'Autocomplete',
+      pageBuilder: () => const AutocompletePage(),
     ),
   ];
 
