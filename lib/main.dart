@@ -21,6 +21,7 @@ import 'widget_otw/39_FutureBuilder.dart';
 import 'widget_otw/41_Actions.dart';
 import 'widget_otw/42_Shortcuts.dart';
 import 'widget_otw/43_Focus.dart';
+import 'widget_otw/44_TextStyle.dart';
 
 void main() {
   runApp(const MyApp());
@@ -178,6 +179,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 43,
       name: 'Focus',
       pageBuilder: () => const FocusPage(),
+    ),
+    WidgetItem(
+      number: 44,
+      name: 'TextStyle',
+      pageBuilder: () => const TextStylePage(),
     ),
   ];
 
