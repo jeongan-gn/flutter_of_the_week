@@ -22,6 +22,7 @@ import 'widget_otw/41_Actions.dart';
 import 'widget_otw/42_Shortcuts.dart';
 import 'widget_otw/43_Focus.dart';
 import 'widget_otw/44_TextStyle.dart';
+import 'widget_otw/46_LinearGradient.dart';
 
 void main() {
   runApp(const MyApp());
@@ -184,6 +185,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 44,
       name: 'TextStyle',
       pageBuilder: () => const TextStylePage(),
+    ),
+    WidgetItem(
+      number: 46,
+      name: 'LinearGradient',
+      pageBuilder: () => const LinearGradientPage(),
     ),
   ];
 
