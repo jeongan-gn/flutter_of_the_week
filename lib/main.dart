@@ -18,6 +18,7 @@ import 'widget_otw/29_Draggable.dart';
 import 'widget_otw/34_RawMagnifier.dart';
 import 'widget_otw/38_NavigationBar.dart';
 import 'widget_otw/39_FutureBuilder.dart';
+import 'widget_otw/41_Actions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -160,6 +161,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       pageBuilder: () => const FutureBuilderPage(
         title: "39. FutureBuilder",
       ),
+    ),
+    WidgetItem(
+      number: 41,
+      name: 'Actions',
+      pageBuilder: () => const ActionsPage(),
     ),
   ];
 
