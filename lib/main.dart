@@ -20,6 +20,7 @@ import 'widget_otw/38_NavigationBar.dart';
 import 'widget_otw/39_FutureBuilder.dart';
 import 'widget_otw/41_Actions.dart';
 import 'widget_otw/42_Shortcuts.dart';
+import 'widget_otw/43_Focus.dart';
 
 void main() {
   runApp(const MyApp());
@@ -172,6 +173,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 42,
       name: 'Shortcuts',
       pageBuilder: () => const ShortcutsPage(),
+    ),
+    WidgetItem(
+      number: 43,
+      name: 'Focus',
+      pageBuilder: () => const FocusPage(),
     ),
   ];
 
