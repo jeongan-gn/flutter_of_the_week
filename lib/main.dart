@@ -24,6 +24,7 @@ import 'widget_otw/43_Focus.dart';
 import 'widget_otw/44_TextStyle.dart';
 import 'widget_otw/46_LinearGradient.dart';
 import 'widget_otw/47_Autocomplete.dart';
+import 'widget_otw/48_NavigationRail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -196,6 +197,11 @@ class _WidgetListPageState extends State<WidgetListPage> {
       number: 47,
       name: 'Autocomplete',
       pageBuilder: () => const AutocompletePage(),
+    ),
+    WidgetItem(
+      number: 48,
+      name: 'NavigationRail',
+      pageBuilder: () => const NavigationRailPage(),
     ),
   ];
 
